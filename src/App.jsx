@@ -50,7 +50,7 @@ leadershipTeam: [
     { role: "SAA", name: "TM Kirthiga" },
     { role: "Presiding Officer", name: "TM Stanly Richard" },
     { role: "Toastmaster of the Day (TMoD)", name: "TM Arun (Successful Club Series)" },
-    { role: "General Evaluator (GE)", name: "TM Ajit Kumar" },
+    { role: "General Evaluator (GE)", name: "TM Ajith Kumar" },
     { role: "Table Topics Master (TTM)", name: "TM Issac" },
     { role: "Timer", name: "TM Savitha" },
     { role: "Ah Counter", name: "TM Helen" },

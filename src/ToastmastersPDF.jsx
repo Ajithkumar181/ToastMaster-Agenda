@@ -551,7 +551,7 @@ const ToastmastersPDF = ({ data }) => {
         {/* Title */}
         <View style={styles.speakerHeader}>
           <Text style={styles.speakerName}>
-            🎓 Educational Session {idx + 1}
+             Educational Session {idx + 1}
           </Text>
         </View>
 

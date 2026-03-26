@@ -1,0 +1,424 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+  --navy: #1E3A5F;
+  --gold: #D4AF37;
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --border: #E5E7EB;
+}
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6; /* 🔥 more readable */
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1050px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  text-align: center;
+  margin-bottom: 35px; /* 🔥 more spacing */
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+h3 {
+  margin-bottom: 14px;
+  margin-top: 28px; /* 🔥 section separation */
+  color: var(--navy);
+  font-weight: 600;
+  border-left: 5px solid var(--gold);
+  padding-left: 10px;
+}
+
+.sub-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px; /* 🔥 more breathing */
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ROLE ROW ===== */
+.role-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0; /* 🔥 more spacing */
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.role-row:last-child {
+  border-bottom: none;
+}
+
+.role-name {
+  font-weight: 600;
+  color: var(--navy);
+  min-width: 240px;
+}
+
+/* ===== INPUT & SELECT ===== */
+input,
+select {
+  flex: 1;
+  padding: 12px 14px; /* 🔥 bigger touch area */
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  background: #fafafa;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* ===== TWO COLUMN ===== */
+.two-col {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* ===== BUTTON BASE ===== */
+.btn {
+  background: var(--navy);
+  color: #ffffff;
+  border: none;
+
+  padding: 0 14px;
+  height: 36px;
+
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #162d4a;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.25);
+}
+
+/* ===== BUTTON GROUP FIX ===== */
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ===== EDIT BUTTON ===== */
+.btn.edit {
+  background: #f1f5f9;
+  color: var(--navy);
+}
+
+.btn.edit:hover {
+  background: #e2e8f0;
+}
+
+/* ===== SPEAKER CARD ===== */
+.speaker-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px; /* 🔥 spacious */
+  margin-bottom: 18px;
+  border-left: 5px solid var(--gold);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== BUTTON GROUP ===== */
+/* ===== BUTTON ROW ===== */
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ===== BUTTON BASE ===== */
+.btn {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 13px;
+  border-radius: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  background: var(--navy);
+  color: #fff;
+}
+
+/* ===== HOVER ===== */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.2);
+}
+
+/* ===== PRIMARY ACTION ===== */
+.btn.gold {
+  background: var(--gold);
+  color: #111;
+  font-weight: 600;   /* 🔥 highlight */
+}
+
+/* ===== BUTTON GROUP VARIANT ===== */
+.button-row.primary {
+  justify-content: space-between; /* 🔥 better layout for actions */
+}
+
+/* ===== BUTTON GROUP CENTERED ===== */
+.button-row.center {
+  justify-content: center;
+}
+/* ===== CARD HEADER ===== */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444; /* red */
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+
+
+/* ===== ERROR TEXT ===== */
+.error {
+  color: #dc2626;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* ===== HOVER ===== */
+.role-row:hover {
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+/* ========================================= */
+/* 📱 MOBILE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .role-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .role-name {
+    min-width: unset;
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ========================================= */
+/* 💻 LARGE DESKTOP */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  /* ===== CONTAINER ===== */
+  .container {
+    padding: 14px;
+    margin: 10px auto;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  /* ===== CARD ===== */
+  .card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  /* ===== ROLE ROW ===== */
+  .role-row {
+    flex-direction: column;
+    align-items: stretch;   /* 🔥 full width fields */
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .role-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* ===== INPUTS ===== */
+  input,
+  select {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  /* ===== TWO COLUMN → STACK ===== */
+  .two-col {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ===== SPEAKER CARD ===== */
+  .speaker-card {
+    padding: 14px;
+  }
+
+  /* ===== BUTTON GROUP ===== */
+  .button-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ===== BUTTON FIX ===== */
+  .btn {
+    width: 100%;
+    height: 40px;           /* 🔥 bigger tap area */
+    font-size: 14px;
+  }
+
+  /* ===== EDIT BUTTON ALIGNMENT ===== */
+  /* ===== SECTION HEADER ===== */
+/* ===== SECTION HEADER (PERFECT ALIGNMENT) ===== */
+/* ===== SECTION HEADER (PERFECT ALIGNMENT) ===== */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* 🔥 vertical alignment fix */
+  gap: 12px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+/* REMOVE extra margin from h3 inside header */
+.section-header h3 {
+  margin: 0;
+}
+
+/* ===== BUTTON FIX ===== */
+.section-header .btn {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+}
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: row;   /* 🔥 keep inline */
+    align-items: center;
+  }
+
+  .section-header .btn {
+    width: auto;           /* 🔥 prevent full width */
+  }
+}

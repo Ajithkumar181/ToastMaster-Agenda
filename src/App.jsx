@@ -5,6 +5,19 @@ import ToastmastersPDF from "./ToastmastersPDF.jsx";
 export default function App() {
   const [showEdu, setShowEdu] = useState(false);
   const [editLeadership, setEditLeadership] = useState(false);
+  const pathways = [
+  "Presentation Mastery",
+  "Dynamic Leadership",
+  "Engaging Humor",
+  "Motivational Strategies",
+  "Persuasive Influence",
+  "Strategic Relationships",
+  "Visionary Communication",
+  "Icebreaker Speech",
+];
+
+
+  
  const [meeting, setMeeting] = useState({
   meetingNumber: 317,
 
@@ -368,22 +381,20 @@ agenda: [
           />
 
           <div className="two-col">
-            <select
-              value={s.pathway}
-              onChange={(e) =>
-                updateSpeaker(i, "pathway", e.target.value)
-              }
-            >
-              <option>Presentation Mastery</option>
-              <option>Dynamic Leadership</option>
-              <option>Engaging Humor</option>
-              <option>Motivational Strategies</option>
-              <option>Persuasive Influence</option>
-              <option>Strategic Relationships</option>
-              <option>Visionary Communication</option>
-              <option>Icebreaker Speech</option>
-             
-            </select>
+           <input
+  list="pathway-options"
+  placeholder="Type or select pathway"
+  value={s.pathway}
+  onChange={(e) =>
+    updateSpeaker(i, "pathway", e.target.value)
+  }
+/>
+
+<datalist id="pathway-options">
+  {pathways.map((p, index) => (
+    <option key={index} value={p} />
+  ))}
+</datalist>
 
             <select
               value={s.level}
